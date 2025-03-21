@@ -135,8 +135,29 @@
                     <a class="pro" href="https://github.com/Muhammad-Amankhan-10/Result-Marksheet-Maker.git">Github repo</a>
                 </div>
 
+                <div class="project-card hidden">
+                    <img src="download.jpg" alt="">
+                    <h3>Quiz Project</h3>
+                    <a class="pro" href="https://muhammad-amankhan-10.github.io/Quiz-App-/">Live demo</a>
+                    <a class="pro" href="https://github.com/Muhammad-Amankhan-10/Quiz-App-">Github repo</a>
+                </div>
+
+                <div class="project-card hidden">
+                    <img src="calculator.jpg" alt="">
+                    <h3>Calculator Project</h3>
+                    <a class="pro" href="">Live demo</a>
+                    <a class="pro" href="https://github.com/Muhammad-Amankhan-10/Basic-Working-Calculator">Github repo</a>
+                </div>
+
+                <div class="project-card hidden">
+                    <img src="weather.jpg" alt="">
+                    <h3>Weather Project</h3>
+                    <a class="pro" href="https://muhammad-amankhan-10.github.io/Weather-App/">Live demo</a>
+                    <a class="pro" href="https://github.com/Muhammad-Amankhan-10/Weather-App">Github repo</a>
+                </div>
+                
             </div>   
-            <a href="#" class="btn">See more</a>
+            <a href="#" class="btn" id="see-more-btn">See more</a>
         </div>
     </div>
     <!-- Contact -->
@@ -204,5 +225,27 @@
     slidemenu.style.right = "-200px";
     }
     </script>
+    <script>
+     const seeMoreBtn = document.getElementById("see-more-btn");
+     const hiddenProjects = document.querySelectorAll(".project-card.hidden");
+
+     let isExpanded = false;
+
+     seeMoreBtn.addEventListener("click", (e) => {
+     e.preventDefault(); 
+
+     hiddenProjects.forEach(project => {
+        project.classList.toggle("hidden");
+     });
+
+     if (isExpanded) {
+        seeMoreBtn.textContent = "See More";
+     } else {
+        seeMoreBtn.textContent = "Show Less";
+     }
+
+     isExpanded = !isExpanded;
+     });
+    </script>    
 </body>
 </html>
