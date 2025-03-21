@@ -246,7 +246,14 @@ nav ul li a:hover::after{
     background-color: #c43613;
     transform: scale(1.2);
 }
-  /* Contact  */
+.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+     /* Contact  */
+
 .contact-left{
     flex-basis: 35%;
 }
